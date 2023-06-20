@@ -359,23 +359,33 @@ void print_json (struct json_object * json) {
 void print_entry_list() {
     entry *current = entry_header;
 
+    printf("Entry list:\n");
+
     while (current != NULL) {
         printf("Inode: %d, Name: %s\n", current->inode, current->name);
         current = current->next;
     }
+
+    printf("\n");
 }
 
 void print_reg_files_list() {
     reg_file **current = reg_files_list;
 
+    printf("Regular file list:\n");
+
     while (*current != NULL) {
         printf("Inode: %d, Type: %s, Data: %s\n", (*current)->inode, (*current)->type, (*current)->data);
         current++;
     }
+
+    printf("\n");
 }
 
 void print_dir_files_list() {
     dir_file **current = dir_files_list;
+
+    printf("Directory list:\n");
 
     while (*current != NULL) {
         printf("Inode: %d, Type: %s\n", (*current)->inode, (*current)->type);
@@ -389,6 +399,8 @@ void print_dir_files_list() {
 
         current++;
     }
+
+    printf("\n");
 }
 
 
