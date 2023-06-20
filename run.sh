@@ -2,5 +2,7 @@ set -x
 
 mkdir mnt
 
-./fuse_example ./mnt
-#./fuse_example -d -f ./mnt
+./jsonfs ./fs.json
+# ./jsonfs -d -f ./mnt
+# run on single thread
+# ./jsonfs -d -s -f ./mnt
