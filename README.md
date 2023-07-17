@@ -1,4 +1,4 @@
-# OS_HW5
+# JsonFS: Json File System using FUSE 
 * ITP30002-02
 * Seongbin Kim 22100113
 
